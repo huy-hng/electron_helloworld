@@ -8,7 +8,11 @@ const url = require("url");
 let win;
 
 function createWindow() {
-  win = new BrowserWindow({ width: 1280, height: 720 });
+  win = new BrowserWindow({
+    width: 1280,
+    height: 720,
+    webPreferences: { webviewTag: true }
+  });
 
   win.loadURL(
     url.format({
